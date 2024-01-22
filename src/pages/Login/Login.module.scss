@@ -92,14 +92,16 @@
   line-height: normal;
 }
 
-.loading {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #ccc;
-  border-radius: 10px;
-  height: 58px;
-  cursor: not-allowed;
+.text_sub {
+  display: block;
+  text-decoration: none;
+  color: #666666;
+  margin: 20px 0 10px 0;
+  font-size: 14px;
+
+  &:hover {
+    color: deepskyblue;
+  }
 }
 
 .icon_loading {
@@ -142,4 +144,8 @@
   border: 2px solid #DDD;
   background: #F8F8F8;
   cursor: pointer;
+}
+
+.container_btn {
+  height: 58px;
 }

@@ -1,0 +1,53 @@
+.main {
+  padding-top: 50px;
+}
+
+.container {
+  cursor: pointer;
+  border-radius: 4px;
+  &:hover {
+    box-shadow: 4px 7px 6px #cccccc;
+  }
+}
+
+.container_image {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  padding: 36px 73px;
+  background-color: #e8e8e8;
+  height: 283px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container_content {
+  padding: 10px;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 600;
+  padding-bottom: 18px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  height: 70px;
+}
+
+.author,
+.genre {
+  font-size: 14px;
+  color: #666;
+}
+
+.author {
+  padding-bottom: 20px;
+}
+
+.price {
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: underline;
+}

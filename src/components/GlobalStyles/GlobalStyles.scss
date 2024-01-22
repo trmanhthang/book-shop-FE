@@ -1,5 +1,6 @@
 @import "normalize.css";
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import "GridSystem";
 
 :root {
   --primary-color: #169C89;
@@ -27,5 +28,18 @@ label,
 input {
   outline: none;
   height: 100%;
+  width: 100%;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+img {
   width: 100%;
 }

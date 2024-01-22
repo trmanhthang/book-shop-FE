@@ -7,7 +7,8 @@ import {toastSuccess, toastWarning} from "../../components/Alert";
 import {useState} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faSpinner} from "@fortawesome/free-solid-svg-icons";
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
+import Loading from "../../components/Loading";
 
 const cx = classNames.bind(styles);
 
@@ -198,11 +199,10 @@ function Register() {
                                 style={{cursor: isLoading ? "unset" : "pointer"}}>Đăng ký
                             </button>
                             :
-                            <div className={cx('loading')}>
-                                <FontAwesomeIcon icon={faSpinner} className={cx('icon_loading')}/>
-                            </div>
+                            <Loading/>
                         }
                     </div>
+                    <Link to={'/login'} className={cx('link_nav')}>Bạn đã có tài khoản?</Link>
                     <div className={cx('text')}>Or connect</div>
                     <div className={cx("container_social")}>
                         <div className={cx("btn_social")}>
