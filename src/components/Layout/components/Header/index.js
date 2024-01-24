@@ -10,13 +10,12 @@ const cx = classNames.bind(styles);
 
 function Header() {
     let flag = true;
-    const [categories, setCategories] = useState([]);
+    const cartInfo = JSON.parse(localStorage.getItem("cart"));
     const isLogging = localStorage.getItem("isLogin");
     const user = JSON.parse(localStorage.getItem("user"));
 
-    console.log(user);
     useEffect(() => {
-        getAllGenre();
+
     }, [flag])
 
     return (
@@ -32,15 +31,6 @@ function Header() {
                                 </li>
                                 <li className={cx('nav_items')}>
                                     <Link to={''}>About</Link>
-                                </li>
-                                <li className={cx('nav_items')}>
-                                    <Link to={''}>Category</Link>
-                                    <ul className={cx('nav_sub')}>
-                                        {categories.map((category) =>
-                                            <li key={category.id}
-                                                className={cx('nav_sub_items')}>{category?.genreName}</li>
-                                        )}
-                                    </ul>
                                 </li>
                                 <li className={cx('nav_items')}>
                                     <Link to={''}>Contact</Link>
@@ -75,14 +65,6 @@ function Header() {
             </div>
         </div>
     )
-
-    function getAllGenre() {
-        axios.get('http://localhost:4000/genre/category').then((res) => {
-            setCategories(res.data);
-        }).catch((err) => {
-            console.log(err);
-        })
-    }
 
     function logOut() {
         localStorage.clear();
