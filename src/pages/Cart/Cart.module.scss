@@ -1,0 +1,154 @@
+.container {
+  padding: 20px 0;
+}
+
+.wrapper {
+
+}
+
+.table {
+  text-align: left;
+  width: 100%;
+  border-collapse: collapse;
+  overflow: auto;
+
+  tbody, td, tfoot, th, thead, tr {
+    border-color: inherit;
+    border-style: solid ;
+    border-width: 0;
+  }
+
+  tbody {
+    max-height: 544px;
+    overflow-y: auto;
+  }
+
+  td, th {
+    padding: 10px;
+  }
+
+  td {
+    border-bottom-color: #ccc;
+    border-bottom-width: 1px;
+  }
+
+  th {
+    border-bottom-color: #888;
+    border-bottom-width: 2px;
+    font-weight: 600;
+  }
+}
+
+.container_checkbox {
+
+}
+
+.wrapper_head {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  gap: 60px;
+}
+
+.container_image {
+  width: 80px;
+  display: flex;
+  align-items: center;
+
+  img {
+    border-radius: 6px;
+  }
+}
+
+.container_info {
+
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.container_author {
+  span:first-child {
+    font-size: 14px;
+    font-weight: 500;
+    color: #9b9b9b;
+  }
+
+  span:last-child {
+    font-size: 16px;
+    font-weight: 500;
+    color: #666;
+  }
+}
+
+.container_quantity {
+  display: flex;
+
+  input {
+    width: 61px;
+    padding: 10px 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    color: #666;
+  }
+
+  button {
+    background-color: var(--white-color);
+    padding: 0 10px;
+    color: deepskyblue;
+    cursor: pointer;
+    border-radius: 6px;
+
+    &:hover {
+      background-color: #f5f5f5;
+    }
+  }
+}
+
+.container_price {
+  color: red;
+
+  span:first-child {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  span:last-child {
+    margin-left: 4px;
+    font-size: 14px;
+    text-decoration: underline;
+    font-weight: 500;
+  }
+}
+
+.container_remove {
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  padding: 4px 0;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover {
+    border: 1px solid #666;
+  }
+
+  &:hover svg {
+    color: #666;
+  }
+
+  svg {
+    font-size: 14px;
+    color: #ccc;
+  }
+}
+
+.no_cart {
+  padding: 50px 300px 0 300px;
+}
+
+

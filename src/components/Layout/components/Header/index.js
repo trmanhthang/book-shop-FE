@@ -13,6 +13,7 @@ function Header() {
     const cartInfo = JSON.parse(localStorage.getItem("cart"));
     const isLogging = localStorage.getItem("isLogin");
     const user = JSON.parse(localStorage.getItem("user"));
+    const cart = cartInfo?.cartDetails;
 
     useEffect(() => {
 
@@ -51,9 +52,42 @@ function Header() {
                                         <li onClick={() => logOut()}>Đăng xuất</li>
                                     </ul>
                                 </div>
-                                <div className={cx('container_cart')}>
+                                <Link to={"/cart"} className={cx('container_cart')}>
+                                    {!cart.length < 1 && <span className={cx('popup_quantity')}>{cart.length}</span>}
                                     <FontAwesomeIcon icon={faCartShopping}/>
-                                </div>
+                                    {!cart.length < 1
+                                        ?
+                                        <ul className={cx('popup_cart')}>
+                                            <li>
+                                                <div className={cx('cart_image')}>
+                                                    <img
+                                                        src={'https://cdn0.fahasa.com/media/catalog/product/d/n/dntttttuntitled.png'}
+                                                        alt={'ảnh minh hoạ'}/>
+                                                </div>
+                                                <div className={cx('wrapper_info')}>
+                                                    <div className={cx('cart_title')}>Đắc nhân tâm</div>
+                                                    <div className={cx('cart_author')}>
+                                                        <span>Tác giả: </span>
+                                                        <span>Nguyễn Nhật Ánh</span>
+                                                    </div>
+                                                </div>
+                                                <div className={cx('wrapper_total')}>
+                                                    <div className={cx('group_quantity')}>
+                                                        <span>x</span>
+                                                        <span>2</span>
+                                                    </div>
+                                                    <div className={cx('total')}>100000đ</div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        :
+                                        <ul className={cx('popup_cart')}>
+                                            <div className={cx('no_cart')}>
+                                                <img src={'https://shopcohai.com/public/images/empty-cart.png'} alt={'no cart'}/>
+                                            </div>
+                                        </ul>
+                                    }
+                                </Link>
                             </div>
                             :
                             <div className={cx('container_btn')}>

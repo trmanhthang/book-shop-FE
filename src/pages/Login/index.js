@@ -170,8 +170,7 @@ function Login() {
             setIsLoading(false);
             localStorage.setItem("isLogin", true);
             localStorage.setItem("user", JSON.stringify(res.data.user));
-            localStorage.setItem("cart", res.data.user.cart.cartDetails ? JSON.stringify(res.data.user.cart) : "");
-            localStorage.setItem("idCart", res.data.user.cart.id);
+            localStorage.setItem("cart", res.data.user.cart ? JSON.stringify(res.data.user.cart) : "");
             navigate('/')
         }).catch((err) => {
             toastWarning(err.response.data.message)
